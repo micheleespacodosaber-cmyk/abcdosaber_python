@@ -16,9 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tipodeatividade/', include('tipodeatividade.urls')), path('aluno/', include('aluno.urls')),path('instrutor/', include('instrutor.urls')),path('titulo/', include('titulo.urls')),path('turma/', include('turma.urls')),path('utilitario/', include('utilitario.urls')),path('professor/', include('professor.urls'))
+    path('', TemplateView.as_view(template_name='escola.html')),
+    path('tipodeatividade/', include('tipodeatividade.urls')), 
+    #path('aluno/', include('aluno.urls')),
+    #path('instrutor/', include('instrutor.urls')),
+    #path('titulo/', include('titulo.urls')),
+    #path('turma/', include('turma.urls')),
+    #path('utilitarios/', include('utilitarios.urls')),
+    #path('professor/', include('professor.urls'))
 ]
 
