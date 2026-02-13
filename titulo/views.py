@@ -13,3 +13,6 @@ def listar(request):
     }
 
     return render(request, 'titulo/listarTitulos.html', context=contexto)
+def carregar_titulo(request):
+    return render(request, 'titulo/cadastrotitulo.html')
+

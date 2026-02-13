@@ -4,5 +4,6 @@ from titulo import views
 app_name = 'titulo'
 
 urlpatterns = [
-    path("lista/", views.listar, name="listar_titulo"),
+    path("listar/", views.listar, name="listar"),
+    path("cadastro/", views.carregar_titulo, name='cadastro')
 ]

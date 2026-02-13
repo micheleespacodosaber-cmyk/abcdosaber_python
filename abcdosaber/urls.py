@@ -22,9 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='escola.html')),
     path('tipodeatividade/', include('tipodeatividade.urls')), 
+    path('titulo/', include('titulo.urls')),
     #path('aluno/', include('aluno.urls')),
     #path('instrutor/', include('instrutor.urls')),
-    path('titulo/', include('titulo.urls')),
     #path('turma/', include('turma.urls')),
     #path('utilitarios/', include('utilitarios.urls')),
     #path('professor/', include('professor.urls'))

@@ -1,4 +1,4 @@
-{% extends 'base_template.html'%}
+{% extends 'base_template.html' %}
 
 {% block title %}
     <title>Tipos de Atividade</title>
@@ -7,9 +7,9 @@
 {% block menu %}
 <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
                 <div class="navbar-nav">
-                    <a href="../escola.html" class="nav-link">Início</a>
-                    <a href="cadastroTiposAtividade.html" class="nav-link">Cadastrar</a>
-                    <a href="listarTiposAtividade.html" class="nav-link">Listar</a>
+                    <a href="/" class="nav-link">Início</a>
+                    <a href="{% url 'tipodeatividade:cadastro' %}" class="nav-link">Cadastrar</a>
+                    <a href="{% url 'tipodeatividade:listar' %}" class="nav-link">Listar</a>
                 </div>
             </div>
 {% endblock %}
