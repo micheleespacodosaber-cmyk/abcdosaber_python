@@ -26,4 +26,4 @@ def cadastrar(request):
         )
 
         tipodeatividade.save()
-return render(request, 'tipodeatividade/cadastroTipoDeAtividade.html')
+    return render(request, 'tipodeatividade/cadastroTipoDeAtividade.html')

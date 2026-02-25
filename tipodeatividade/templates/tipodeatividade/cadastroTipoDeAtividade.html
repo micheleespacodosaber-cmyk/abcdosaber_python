@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <form action="{% url 'tipodeatividade:cadastrar %'}" method="POST" name="frmCadastrarTiposAtividade" id="idFrmCadastrarTiposAtividade">
+        <form action="{% url 'tipodeatividade:cadastrar' %'}" method="POST" name="frmCadastrarTiposAtividade" id="idFrmCadastrarTiposAtividade">
             {% csrf_token %}
             <div class="form-group">
                 <label for='idDescricao'>Descrição</label>
@@ -39,4 +39,5 @@
         </form>
     </main>
 {% endblock %}
+
 

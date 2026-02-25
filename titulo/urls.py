@@ -5,5 +5,6 @@ app_name = 'titulo'
 
 urlpatterns = [
     path("listar/", views.listar, name="listar"),
-    path("cadastro/", views.carregar_titulo, name='cadastro')
+    path("cadastro/", views.carregar_titulo, name='cadastro'),
+    path("cadastrar/", views.cadastrar, name='cadastrar'),
 ]

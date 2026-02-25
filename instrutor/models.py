@@ -1,3 +1,18 @@
 from django.db import models
 
-# Create your models here.
+class Instrutor(models.Model):
+
+    id = models.AutoField(primary_key=True, help_text='ID do instrutor')
+    rg = models.CharField(max_length=15, null=False, help_text='código do RG')
+    nome = models.CharField(max_length=70, null=False, help_text='Nome do instrutor')
+    dataNascimento = models.DateField(null=False, help_text='Data de nascimento')
+    telefone = models.CharField(max_length=9, null=False, help_text='Telefone para contato')
+    ddd = models.CharField(max_length=3, null=False, help_text='DDD do seu estado')
+
+    codigo_titulo = models.IntegerField(
+        null=True,
+        help_text='Título do instrutor'
+    )
+
+    def __str__(self):
+        return f"{self.id} - {self.nome}"
