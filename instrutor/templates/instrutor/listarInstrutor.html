@@ -48,8 +48,13 @@
                     <!-- linhas -->
                     <tr>
                         <!-- colunas cabecalho -->
-                        <th>ID</th>
-                        <th>Descrição</th>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>RG</th>
+                        <th>Data Nascimento</th>
+                        <th>DDD</th>
+                        <th>Telefone</th>
+                        <th>Titularidade</th>
                     </tr>
                 </thead>
 
@@ -57,8 +62,13 @@
                  {% for ta in instrutores %}
 
                      <tr>
-                         <td> {{ ta.id }}  </td>
-                        <td> {{ ta.descricao }} </td>
+                        <td> {{ ta.id }}  </td>
+                        <td> {{ ta.nome}} </td>
+                        <td> {{ ta.rg}} </td>
+                        <td> {{ ta.dataNascimento}} </td>
+                        <td> {{ ta.ddd}} </td>
+                        <td> {{ ta.telefone}} </td>
+                        <td> {{ ta.codigo_titulo}} </td>
                      </tr>
 
                 {% endfor %}
