@@ -29,4 +29,12 @@ def cadastrar(request):
         titulo.save()
     return render(request, 'titulo/cadastroTitulo.html')
 
+def excluir(request, codigoTitulo):
+    try:
+        titulo = Titulo.objects.get(codigo=codigoTitulo)
+        titulo.delete()
+    except Titulo.DoesNotExist:
+        pass
+
+    return redirect("titulo:listar")
 
